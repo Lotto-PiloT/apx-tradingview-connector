@@ -11,7 +11,7 @@ import 'dotenv/config';
 import { getDecimalPointLength, getStrategiesDB } from '../../helper';
 
 export const dydxBuildOrderParams = async (alertMessage: AlertObject) => {
-	const [db, rootData] = getStrategiesDB();
+	const [, rootData] = getStrategiesDB();
 
 	// set expiration datetime. must be more than 1 minute from current datetime
 	const date = new Date();
